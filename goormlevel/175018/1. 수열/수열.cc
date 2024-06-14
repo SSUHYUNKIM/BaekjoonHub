@@ -12,6 +12,6 @@ int main() {
 		fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1000000007;
 	}
 	
-	cout << fibo[K] % 1000000007 << '\n';
+	cout << fibo[K] << '\n';
 	return 0;
 }
