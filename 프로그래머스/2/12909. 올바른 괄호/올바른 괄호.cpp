@@ -8,19 +8,17 @@ stack<char> st;
 
 bool solution(string s)
 {
-   
-    for(auto ss : s)
-    {
-        if(ss == ')')
-        {
-            if(st.empty())
-                return false;
-            else
+    for(auto str : s) {
+        if(st.empty()) {
+            st.push(str);
+        } else {
+            if(str == '(') {
+                st.push(str);
+            } else if(st.top() == '(') {
                 st.pop();
+            }
         }
-        else
-            st.push(ss);
     }
-
+    
     return st.empty();
 }
