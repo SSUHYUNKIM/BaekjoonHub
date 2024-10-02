@@ -1,10 +1,10 @@
 # [level 0] [PCCE 기출문제] 6번 / 가채점 - 250128 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250128) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250128?language=java) 
 
 ### 성능 요약
 
-메모리: 4.19 MB, 시간: 0.02 ms
+메모리: 76.2 MB, 시간: 0.04 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 10월 02일 22:31:59
+2024년 10월 02일 22:32:43
 
 ### 문제 설명
 
