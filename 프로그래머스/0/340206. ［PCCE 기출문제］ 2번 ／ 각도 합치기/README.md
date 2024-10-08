@@ -1,10 +1,10 @@
 # [level 0] [PCCE 기출문제] 2번 / 각도 합치기 - 340206 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/340206?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/340206?language=java) 
 
 ### 성능 요약
 
-메모리: 4.2 MB, 시간: 2.62 ms
+메모리: 71.6 MB, 시간: 171.60 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 10월 08일 13:03:29
+2024년 10월 08일 13:03:55
 
 ### 문제 설명
 
