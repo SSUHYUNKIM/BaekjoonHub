@@ -4,15 +4,17 @@ using namespace std;
 
 bool solution(string s)
 {
-    int temp1 = 0, temp2 = 0;
-    
-    for(auto ss : s)
-    {
-        if(ss == 'p' || ss == 'P')
-            temp1++;
-        else if(ss == 'y' || ss == 'Y')
-            temp2++;
+    bool answer = true;
+    int pCnt = 0, yCnt = 0;
+
+    for(auto c : s) {
+        if(c == 'p' || c == 'P') {
+            pCnt++;
+        }
+        if(c == 'y' || c == 'Y') {
+            yCnt++;
+        }
     }
-    
-    return temp1 == temp2;
+
+    return pCnt == yCnt;
 }
