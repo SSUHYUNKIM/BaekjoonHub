@@ -1,15 +1,12 @@
-import java.util.*;
+import java.util.Arrays;
 
 class Solution {
     public long solution(long n) {
-        long answer = 0;
-        String[] temp = String.valueOf(n).split("");
-        Arrays.sort(temp);
+        char[] charArray = Long.toString(n).toCharArray();
         
-        StringBuilder sb = new StringBuilder();
-        for (String t : temp) 
-            sb.append(t);
+        Arrays.sort(charArray);
+        StringBuilder sortedStr = new StringBuilder(new String(charArray)).reverse();
         
-        return Long.parseLong(sb.reverse().toString());
+        return Long.parseLong(sortedStr.toString());
     }
 }
