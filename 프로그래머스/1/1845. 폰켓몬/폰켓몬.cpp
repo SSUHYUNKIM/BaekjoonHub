@@ -5,13 +5,16 @@ using namespace std;
 
 int solution(vector<int> nums)
 {
-    int max = nums.size() / 2;
+    int answer = nums.size() / 2;
+    unordered_set<int> unSet;
     
-    unordered_set<int> unSet(nums.begin(), nums.end());
-    
-    if(unSet.size() > max) {
-        return max;
-    } else {
-        return unSet.size();
+    for(auto num : nums) {
+        unSet.insert(num);
     }
+    
+    if(answer > unSet.size()) {
+        answer = unSet.size();
+    }
+    
+    return answer;
 }
