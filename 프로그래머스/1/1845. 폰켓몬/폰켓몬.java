@@ -3,15 +3,15 @@ import java.io.*;
 
 class Solution {
     public int solution(int[] nums) {
-        int max = nums.length / 2;
+        int answer = nums.length / 2;
         HashSet<Integer> hashSet = new HashSet<>();
         
         for (int num : nums) {
             hashSet.add(num);
         }
         
-        if(hashSet.size() > max)
-            return max;
+        if(hashSet.size() > answer)
+            return answer;
         else
             return hashSet.size();
     }
