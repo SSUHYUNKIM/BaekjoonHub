@@ -1,19 +1,14 @@
 import java.util.*;
 
 public class Solution {
-    public int[] solution(int[] arr) {
-        List<Integer> list = new ArrayList<>();
-        
-        for (int i = 0; i < arr.length; i++) {
-            if (list.isEmpty() || list.get(list.size() - 1) != arr[i]) {
-                list.add(arr[i]);
-            }
-        }
+    public List<Integer> solution(int[] arr) {
+        List<Integer> answer = new ArrayList<>();
+        answer.add(arr[0]);
 
-        int[] answer = new int[list.size()];
-        
-        for (int i = 0; i < list.size(); i++) {
-            answer[i] = list.get(i);
+        for(int i = 1; i < arr.length; i++) {
+            if(arr[i] != arr[i - 1]) {
+                answer.add(arr[i]);
+            }
         }
         
         return answer;
