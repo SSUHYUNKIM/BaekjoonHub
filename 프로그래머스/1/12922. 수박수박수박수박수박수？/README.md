@@ -1,10 +1,10 @@
 # [level 1] 수박수박수박수박수박수? - 12922 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12922) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12922?language=cpp) 
 
 ### 성능 요약
 
-메모리: 133 MB, 시간: 45.96 ms
+메모리: 4.19 MB, 시간: 0.12 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 12월 02일 01:56:12
+2024년 12월 02일 01:56:48
 
 ### 문제 설명
 
