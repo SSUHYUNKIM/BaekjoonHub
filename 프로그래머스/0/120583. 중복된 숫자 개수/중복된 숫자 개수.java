@@ -3,8 +3,9 @@ class Solution {
         int answer = 0;
         
         for(int a : array) {
-            if(a == n)
+            if(a == n) {
                 answer++;
+            }
         }
         
         return answer;
