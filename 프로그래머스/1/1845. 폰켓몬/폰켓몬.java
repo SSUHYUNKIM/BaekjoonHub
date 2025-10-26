@@ -6,13 +6,14 @@ class Solution {
         int answer = nums.length / 2;
         HashSet<Integer> hashSet = new HashSet<>();
         
-        for (int num : nums) {
+        for(int num : nums) {
             hashSet.add(num);
         }
         
-        if(hashSet.size() > answer)
+        if(hashSet.size() > answer) {
             return answer;
-        else
+        } else {
             return hashSet.size();
+        }
     }
 }
