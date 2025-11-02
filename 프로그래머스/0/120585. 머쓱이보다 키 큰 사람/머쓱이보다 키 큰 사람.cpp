@@ -6,8 +6,8 @@ using namespace std;
 int solution(vector<int> array, int height) {
     int answer = 0;
     
-    for(auto a : array) {
-        if(a > height)
+    for(auto num : array) {
+        if(num > height)
             answer++;
     }
     
