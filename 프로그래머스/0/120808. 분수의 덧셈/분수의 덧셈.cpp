@@ -3,25 +3,28 @@
 
 using namespace std;
 
+// 최대공약수 함수
+int gcd(int a, int b) {
+    while (b != 0) {
+        int r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+
 vector<int> solution(int numer1, int denom1, int numer2, int denom2) {
     vector<int> answer;
-    numer1 *= denom2; // 1 * 4 = 4
-    numer2 *= denom1; // 3 * 2 = 6
     
-    int num1 = denom1 * denom2;
-    int num2 = numer1 + numer2;
-    int div = 2;
+    // 통분
+    int numer = numer1 * denom2 + numer2 * denom1;
+    int denom = denom1 * denom2;
     
-    while (div < 1000) {
-        if(num1 % div == 0 && num2 % div == 0) {
-            num1 /= div;
-            num2 /= div;
-        } else {
-            div++;
-        }
-    }
+    // 약분
+    int g = gcd(numer, denom);
     
-    answer.push_back(num2);
-    answer.push_back(num1);
+    answer.push_back(numer / g);
+    answer.push_back(denom / g);
+    
     return answer;
 }
