@@ -1,25 +1,32 @@
 #include <string>
 #include <vector>
-#include <unordered_map>
 
 using namespace std;
 
 int solution(vector<int> array) {
-    int answer = 0;
-    int maxNum = 0;
-    unordered_map<int, int> um; 
+    int cnt[1000] = {0};
+    
+    for (int x : array) {
+        cnt[x]++;
+    }
+    
+    int maxCnt = 0;
+    int answer = -1;
+    bool duplicate = false;
+    
+    for (int i = 0; i < 1000; i++) {
+        if (cnt[i] > maxCnt) {
+            maxCnt = cnt[i];
+            answer = i;
+            duplicate = false;
+        }
+        else if (cnt[i] == maxCnt && cnt[i] != 0) {
+            duplicate = true;
+        }
+    }
 
-    for (auto num : array) 
-        um[num]++;
-
-    for (const auto& num : um) 
-    {
-        if (num.second > maxNum) 
-        {
-            maxNum = num.second;
-            answer = num.first;
-        } else if (num.second == maxNum) 
-            answer = -1;
+    if (duplicate) {
+        return -1;
     }
     
     return answer;
