@@ -1,17 +1,9 @@
 #include <string>
 #include <vector>
+#include <numeric>
 
 using namespace std;
 
 int solution(int n) {
-    int answer = 0;
-    for(int i = 1; i <= 100; i++)
-    {
-        if((6 * i) % n == 0)
-        {
-            answer = i;
-            break;
-        }
-    }
-    return answer;
+    return lcm(6, n) / 6;
 }
