@@ -5,9 +5,10 @@ using namespace std;
 
 double solution(vector<int> numbers) {
     double answer = 0;
-    int sum = 0;
-    for(auto num : numbers)
-        sum += num;
-    answer = (double) sum / numbers.size();
-    return answer;
+    
+    for(int number : numbers) {
+        answer += number;
+    }
+    
+    return answer / numbers.size();
 }
