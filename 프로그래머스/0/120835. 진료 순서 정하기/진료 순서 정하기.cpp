@@ -6,20 +6,14 @@ using namespace std;
 
 vector<int> solution(vector<int> emergency) {
     vector<int> answer;
-    vector<int> v = emergency;
+    vector<int> sorted = emergency;
 
-    sort(v.begin(), v.end(), greater<>());
+    sort(sorted.begin(), sorted.end(), greater<int>());
 
-    for(int i = 0; i < emergency.size(); i++)
-    {
-        for(int j = 0; j < v.size(); j++)
-        {
-            if(emergency[i] == v[j])
-            {
-                answer.push_back(j + 1);
-                break;
-            }
-        }
+    for (int x : emergency) {
+        int rank = find(sorted.begin(), sorted.end(), x) - sorted.begin() + 1;
+        answer.push_back(rank);
     }
+    
     return answer;
 }
