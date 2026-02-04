@@ -1,27 +1,31 @@
 #include <string>
 #include <vector>
-#include <map>
-#include <sstream>
+#include <unordered_map>
 
 using namespace std;
-    map<string, string> mp { 
-        {".-","a"},{"-...","b"},{"-.-.","c"},{"-..","d"},
-        {".","e"},{"..-.","f"},{"--.","g"},{"....","h"},
-        {"..","i"},{".---","j"},{"-.-","k"},{".-..","l"},
-        {"--","m"},{"-.","n"},{"---","o"},{".--.","p"},
-        {"--.-","q"},{".-.","r"},{"...","s"},{"-","t"},
-        {"..-","u"},{"...-","v"},{".--","w"},{"-..-","x"},
-        {"-.--","y"},{"--..","z"}
-    };
 
 string solution(string letter) {
     string answer = "";
-    string temp;
+    string token = "";
+    unordered_map<string, char> morse = {
+        {".-", 'a'}, {"-...", 'b'}, {"-.-.", 'c'}, {"-..", 'd'}, {".", 'e'},
+        {"..-.", 'f'}, {"--.", 'g'}, {"....", 'h'}, {"..", 'i'}, {".---", 'j'},
+        {"-.-", 'k'}, {".-..", 'l'}, {"--", 'm'}, {"-.", 'n'}, {"---", 'o'},
+        {".--.", 'p'}, {"--.-", 'q'}, {".-.", 'r'}, {"...", 's'}, {"-", 't'},
+        {"..-", 'u'}, {"...-", 'v'}, {".--", 'w'}, {"-..-", 'x'}, {"-.--", 'y'},
+        {"--..", 'z'}
+    };
     
-    stringstream sstream;
-    sstream.str(letter);
+    for (char c : letter) {
+        if (c == ' ') {
+            answer += morse[token];
+            token.clear();
+        } else {
+            token += c;
+        }
+    }
     
-    while(sstream >> temp)
-        answer += mp.find(temp) -> second;
+    answer += morse[token];
+    
     return answer;
 }
