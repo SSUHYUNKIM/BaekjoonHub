@@ -1,10 +1,10 @@
 # [level 0] 가위 바위 보 - 120839 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120839?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120839) 
 
 ### 성능 요약
 
-메모리: 76.3 MB, 시간: 3.05 ms
+메모리: 4.2 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 07일 23:10:29
+2026년 02월 05일 20:52:32
 
 ### 문제 설명
 
